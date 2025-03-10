@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding:1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* SKIP TO MAIN */
+.skip a {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #FFFFFF; 
+    padding: 6px;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+.skip a:focus {
+    top: 20px;
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 10px;
+    text-align: center;
+    display: block;
+    z-index: 9999;
+}
+
+/* HEADER */
+header {
+    background-color: #00274C; 
+    color: #FFFFFF; 
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 1rem;
+}
+
+nav ul li {
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    text-align: center;
+    display: block;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    text-decoration: underline;
+    color: #FFCB05; 
+}
+
+nav ul li a.active {
+    font-weight: bold;  /* Make the active link bold */
+    color: #FFCB05;  /* Maize color for the active link */
+    text-decoration: underline; /* Underline the active link */
+}
+
+
+h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    color: #FFCB05; 
+}
+
+/* MAIN CONTENT */
+main {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* SECTIONS (used in home page) */
+section, div {
+    margin-bottom: 0.5rem;
+}
+
+section {
+    padding: 1rem;
+    background-color: #FFFFFF; 
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+article {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Images */
+img {
+    width: 100%;
+    height: auto;
+}
+
+.grocery-bag{
+    max-width: 50%; 
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figure {
+    margin-bottom: 1rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: #00274C; 
+    color: #FFFFFF; 
+    text-align: center;
+    padding: 1rem;
+    align-content: center;
+    /* margin-top: 1rem; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+footer a {
+    color: #FFFFFF; 
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #FFCB05; 
+}
+
+/* GRID LAYOUT HOME PAGE */
+#life-outside-classroom ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#mental-health ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+ul {
+    padding-left: 30px; 
+    /* indents list items slightly left */
+}
+
+/* Styling Lists */
+ul li {
+    font-size: 1rem;
+    padding: 0.5rem 0; 
+    /* top and bottom 0.5rem, left and right 0 */
+}
+
+/* Styling for unordered list links */
+ul li a {
+    text-decoration: underline;
+}
+
+ul li a:hover {
+    color: #FFCB05;
+}
+
+/* HOME PAGE STYLE */
+section#life-outside-classroom ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+/* GRID LAYOUT FOR CAPS PAGE */
+.container-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 2rem; 
+    margin-top: 2rem;
+}
+
+.letstalk {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.peercounseling {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.togetherall {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.sexualizedviolence {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+
+/* Styling for each list item (li) */
+/* .container-services  {
+    list-style-type: none;
+    padding: 0;
+} */
+
+.container-services div {
+    display: flex;
+    flex-direction: column; /* STACK LINK AND IMAGE VERTICALLY */
+    align-items: center;
+    border: 1px solid #ddd; 
+    padding: 1rem; /* PADDING */
+    background-color: #f9f9f9; /* BKG COLOR */
+}
+
+/* Underlining the links */
+.container-services div a {
+    text-decoration: underline; /* Ensure the link is underlined */
+    color: #00274C; /* UM Blue */
+    margin-bottom: 0.5rem; /* Space between link and image */
+}
+
+/* IMAGE STYLING */
+.container-services div img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners to images */
+}
+
+/* STYLING FOR HOME PAGE */
+.bghighlight {
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block; 
+}
+
+/* STYLING FOR BSI ACADEMIC ADVISING */
+.content-areas h3{
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block;
+}
+
+.quick-links{
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block;
+}
+
+/* STYLING FOR FOOD PANTRY */
+.what-we-provide{
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block;
+}
+
+.news{
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block;
+}
+
+.hours{
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block;
+}
+
+.location{
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block;
+}
+
+/* MAIZE AND BLUE STYLING SPECIFIC */
+a[href="https://mbc.studentlife.umich.edu/news/"] {
+    font-weight: bold; /* Makes the link bold */
+    text-decoration: underline; /* Underlines the link */
+    color: inherit; /* Inherit default text color */
+}
+
+a[href="https://mbc.studentlife.umich.edu/news/"]:hover {
+    color: #FFCB05; /* Changes the link color to Maize on hover */
+}
+
+.news-container {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    grid-template-rows: auto auto; /* Two rows with auto height */
+    gap: 1rem; /* Space between grid items */
+}
+
+.news{
+    grid-column: span 2;
+    display: inline-block
+}
+
+/* STYLING FOR CAPS */
+.our-services{
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block;
+}
+
+.contact {
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block;
+}
+
+.crisis-support {
+    background-color: #00274C; 
+    color: #FFCB05; 
+    padding: 0.2rem 0.5rem; 
+    border-radius: 5px; 
+    display: inline-block;
+}
+
+/* SPECIAL STYLING FOR HOME PAGE */
+.specialh3{
+    font-size: 1.1rem;
+}
+
+/* .content-areas ul {
+    padding: 1rem;
+    background-color: #FFFFFF; 
+    border-radius: 5px;
+}
+
+.content-areas ul li{
+    padding-left: 30px;
+} */
+/* STYLING FOR BSI ACADEMIC ADVISING */
+/* .highlight {
+    color: #FFCB05; /* Maize color (UM) */
+
+
