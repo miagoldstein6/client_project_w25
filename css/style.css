@@ -1,5 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* 404 PAGE STYLING */
+.error-404 {
+    background-image: url('../images/404-Error-Page.png'); /* Adjust path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+.home-button {
+    background-color: #c89137;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+  
+.home-button:hover,
+.home-button:focus {
+    background-color: #a8762d; /* slightly darker on hover */
+    cursor: pointer;
+}
+  
+.error-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .butterfly-icon {
+    width: 10rem;
+    height: auto;
+  }
+  
 body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -8,6 +58,7 @@ body {
     background-color: #f4f4f4;
     padding:1rem;
 }
+
 
 a {
     color: inherit;
@@ -43,22 +94,25 @@ header {
     text-align: center;
 }
 
+/* ALSO PART OF HEADER  */
 nav ul {
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(4, 1fr);
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding: 1rem;
+    padding: 1rem;   
 }
 
+/* ALSO PART OF HEADER  */
 nav ul li {
     align-items: center;
     margin-right: 2rem;
     margin-left: 2rem;
 }
 
+/* ALSO PART OF HEADER  */
 nav ul li a {
     color: #FFFFFF;
     font-size: 1.2rem;
@@ -67,11 +121,13 @@ nav ul li a {
     display: block;
 }
 
+/* ALSO PART OF HEADER  */
 nav ul li a:hover, nav ul li a:focus {
     text-decoration: underline;
     color: #FFCB05; 
 }
 
+/* ALSO PART OF HEADER  */
 nav ul li a.active {
     font-weight: bold;  /* Make the active link bold */
     color: #FFCB05;  /* Maize color for the active link */
@@ -146,12 +202,10 @@ footer {
     text-align: center;
     padding: 1rem;
     align-content: center;
-    /* margin-top: 1rem; */
-
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
-    align-items: center;
+    align-items: stretch;
 }
 
 footer a {
@@ -164,12 +218,25 @@ footer a:hover {
     color: #FFCB05; 
 }
 
-/* GRID LAYOUT HOME PAGE */
-#life-outside-classroom ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+/* Divider style */
+.footer-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/* Add vertical line after all but the last column */
+.footer-section:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1rem; /* matches half the gap */
+    height: 100%;
+    width: 2px;
+    background-color: #ccc;
+}
+
 
 #mental-health ul {
     display: grid;
@@ -185,7 +252,7 @@ ul {
 /* Styling Lists */
 ul li {
     font-size: 1rem;
-    padding: 0.5rem 0; 
+    padding: 0.2rem 0; 
     /* top and bottom 0.5rem, left and right 0 */
 }
 
@@ -198,12 +265,13 @@ ul li a:hover {
     color: #FFCB05;
 }
 
-/* HOME PAGE STYLE */
+/* HOME PAGE (life outside classroom) */
 section#life-outside-classroom ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 1rem;
+    column-gap: 2rem;
+    row-gap: 1rem;
 }
 
 /* GRID LAYOUT FOR CAPS PAGE */
@@ -324,6 +392,18 @@ section#life-outside-classroom ul {
     display: inline-block;
 }
 
+/* Ensures "Read More Here" links are always underlined */
+.news-container a {
+    color: #00274C;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Changes the link color to yellow when hovered */
+.news-container a:hover {
+    color: #FFCB05; /* Yellow (Maize) */
+}
+
 /* MAIZE AND BLUE STYLING SPECIFIC */
 a[href="https://mbc.studentlife.umich.edu/news/"] {
     font-weight: bold; /* Makes the link bold */
@@ -338,8 +418,7 @@ a[href="https://mbc.studentlife.umich.edu/news/"]:hover {
 .news-container {
     display: grid; /* Enable grid layout */
     grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-    grid-template-rows: auto auto; /* Two rows with auto height */
-    gap: 1rem; /* Space between grid items */
+    column-gap: 2rem; /* Space between grid items */
 }
 
 .news{
@@ -377,17 +456,195 @@ a[href="https://mbc.studentlife.umich.edu/news/"]:hover {
     font-size: 1.1rem;
 }
 
-/* .content-areas ul {
-    padding: 1rem;
-    background-color: #FFFFFF; 
-    border-radius: 5px;
+/* GOT QUESTIONS LINK STYLING */
+#got-questions a {
+    color: #00274C; /* UM Blue */
+    font-weight: bold;
+    text-decoration: underline; /* Always underlined */
 }
 
-.content-areas ul li{
-    padding-left: 30px;
-} */
-/* STYLING FOR BSI ACADEMIC ADVISING */
-/* .highlight {
-    color: #FFCB05; /* Maize color (UM) */
+#got-questions a:hover {
+    color: #FFCB05; /* Maize Yellow on hover */
+}
+
+/* STYLE FORM HERE  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+/* General Form Styling */
+.fs-form {
+    font-family: "Montserrat", sans-serif;
+    max-width: 60vw; /* Ensures it doesn't stretch too wide */
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Fields */
+.fs-field {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.fs-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Inputs & Textarea */
+.fs-input, .fs-textarea {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.fs-textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Placeholder Text */
+.fs-input::placeholder, .fs-textarea::placeholder {
+    color: #888;
+}
+
+/* Submit Button */
+.fs-button {
+    font-family: "Montserrat", sans-serif;
+    background-color: #b64e08;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.fs-button:hover {
+    background-color: #79320e;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .fs-form {
+        max-width: 90vw;
+        padding: 1.5rem;
+    }
+}
 
 
+/* ADD MEDIA QUERY HERE  */
+@media screen and (min-width: 900px){
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 1rem;   
+    }
+
+    .physical-health-container{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: nowrap;
+      }
+
+    footer i{
+        font-size: 2rem;
+      }
+
+    footer p{
+        font-size: 1.5rem;
+    }
+
+    #bsi-content ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        column-gap: 2rem;
+        row-gap: 1rem;
+    }
+
+    .grocery-bag {
+        max-width: 30%; /* Limits image size on large screens */
+        height: auto; /* Keeps aspect ratio */
+        display: block; /* Ensures proper centering if needed */
+        margin: 0 auto; /* Centers the image */
+    }
+      
+    .news-container img {
+        max-width: 70%;
+        height: auto;
+        display: block;
+        margin: 1rem auto;
+      }
+      
+    .news-item1{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .news-item2{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .error-grid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+      }
+
+}
+
+/* === 404 PAGE TYPOGRAPHY + ANIMATION === */
+.error-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #c89137;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out both;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .error-subtitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', serif; 
+    color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    animation: fadeInUp 1.4s ease-out both;
+  }
+  
+  /* FADE-IN ANIMATION */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

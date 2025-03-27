@@ -26,7 +26,7 @@
 
     <main class="container" id = "main">
         <section>
-            <h2>Welcome to the University of Michigan Undergrad Success Navigator</h2>
+            <h2>Welcome to the University of Michigan Undergrad Success Navigator!</h2>
             <h3 class = "specialh3">Your Comprehensive Guide to Resources for School Success</h3> 
             <p>This guide is set up to help you be successul inside and outside of the classroom and we have included the following resources throughout our site:</p>
             <ol>
@@ -38,23 +38,26 @@
   
         <section id = "physical-health">
             <h2 class = "bghighlight">Physical Health</h2>
-            <p>Keeping your body healthy is essential for success. The University of Michigan offers numerous resources to help you stay in top physical condition.</p>
-            <article>
-                <h3>University Health Service (UHS)</h3>
-                <figure>
-                    <img src="images/UHS.jpg" alt="University Health Services building">
-                    <!-- <figcaption>University Health Services Building</figcaption> -->
-                </figure>
-                <p>University Health Service (UHS): Access comprehensive medical care, including routine check-ups, vaccinations, and specialist referrals.</p>
-            </article>
-            <article>
-                <h3>Recreational Sports</h3>
-                <figure>
-                    <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
-                    <!-- <figcaption>UMSI out in the fall!</figcaption> -->
-                </figure>
-                <p>Participate in various fitness programs, sports clubs, and use of gym facilities to stay active and healthy.</p>
-            </article>
+                <p>Keeping your body healthy is essential for success. The University of Michigan offers numerous resources to help you stay in top physical condition.</p>
+
+                <div class = "physical-health-container">
+                <article>
+                    <h3>University Health Service (UHS)</h3>
+                    <figure>
+                        <img src="images/UHS.jpg" alt="University Health Services building">
+                        <!-- <figcaption>University Health Services Building</figcaption> -->
+                    </figure>
+                    <p>University Health Service (UHS): Access comprehensive medical care, including routine check-ups, vaccinations, and specialist referrals.</p>
+                </article>
+                <article>
+                    <h3>Recreational Sports</h3>
+                    <figure>
+                        <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
+                        <!-- <figcaption>UMSI out in the fall!</figcaption> -->
+                    </figure>
+                    <p>Participate in various fitness programs, sports clubs, and use of gym facilities to stay active and healthy.</p>
+                </article>
+            </div>
         </section>
 
         <section id = "mental-health">
@@ -88,6 +91,12 @@
                 <li><strong>Housing and Dining:</strong> Find information on on-campus housing options and dining services to ensure a comfortable living experience.</li>
             </ul>
         </section>
+
+        <section id = "got-questions">
+            <h2 class = "bghighlight">Got any questions?</h2>
+            <p>Press this <a href="forms.html">link</a> to submit any questions!</p>
+        </section>
+
     </main>
 
     <footer>
@@ -98,15 +107,25 @@
         </div>
 
         <div class = "footer-section">
-            <p><a href="https://www.si.umich.edu/student-experience/academic-success">UMSI Academic Advising </a></p>
-        </div>
-
-        <div class = "footer-section">
             <a href = https://www.instagram.com/umschoolofinformation aria-label = "link to UMSI Instagram">
                 <i class="fa-brands fa-square-instagram"></i>
             </a>
         </div>
+
+        <div class = "footer-section">
+            <p><a href="https://www.si.umich.edu/student-experience/academic-success">UMSI Academic Advising </a></p>
+        </div>
+
+        <div class = "footer-section"> 
+            <p>© <span id="year"></span> UMSI</p>
+        </div>
     </footer>
+
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+    
 
 </body>
 </html>

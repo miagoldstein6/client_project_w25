@@ -49,7 +49,7 @@
         <section>
             <h3 class = "news">News</h3>
             <div class = "news-container">
-                <div>
+                <div class = "news-item1">
                     <h4>Fall 2024 Mobile Distribution for North Campus</h4>
                     <img src="images/carrots.jpg" alt="Many Carrots">
                     <p>U-M’s Maize & Blue Cupboard (MBC), the College of Engineering, Student Life, and Ann Arbor-based Food Gatherers will host North Campus mobile food distributions to make MBC resources more accessible for North Campus residents. The mobile distribution takes place in the connector hallway between the Duderstadt Media Library and Pierpont Commons.</p>
@@ -59,7 +59,7 @@
                     <p><a href="https://mbc.studentlife.umich.edu/2022/09/01/mobile-food-distribution-for-north-campus/">Read More Here</a></p>
                 </div>
                 
-                <div>
+                <div class = "news-item2">
                     <h4>Federal Assistance for Food Security</h4>
                     <img src="images/foodpantry.png" alt="Shelves of food inside Maize and Blue Cupboard">
                     <p>If you are struggling with food insecurity, you may be eligible for assistance from SNAP. You must apply for SNAP in the state where you currently reside. You can learn about eligibility for Michigan SNAP at the Michigan Department of Health and Human Services website. You can apply for SNAP benefits at the MI Bridges website.</p>
@@ -93,6 +93,11 @@
                 </ul>
             </div>
         </section>
+
+        <section id = "got-questions">
+            <h2 class = "bghighlight">Got any questions?</h2>
+            <p>Press this <a href="forms.html">link</a> to submit any questions!</p>
+        </section>
  
     </main>
 
@@ -103,16 +108,25 @@
             </a>
         </div>
     
-        <div class = "footer-section"> 
-            <p><a href="https://mbc.studentlife.umich.edu/">Maize and Blue Food Cupboard</a></p>
-        </div>
-    
         <div class = "footer-section">
             <a href = https://www.instagram.com/umschoolofinformation aria-label = "link to UMSI Instagram">
                 <i class="fa-brands fa-square-instagram"></i>
             </a>
         </div>
+
+        <div class = "footer-section"> 
+            <p><a href="https://mbc.studentlife.umich.edu/">Maize and Blue Food Cupboard</a></p>
+        </div>
+
+        <div class = "footer-section"> 
+            <p>© <span id="year"></span> UMSI</p>
+        </div>
+
     </footer>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
     
 </body>
 

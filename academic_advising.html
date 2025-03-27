@@ -35,7 +35,7 @@
         </div>  -->
 
         <div class = "content-areas">
-            <section>
+            <section id = "bsi-content">
                 <h3>Content Areas</h3> 
                 <ul>
                     <li>
@@ -83,6 +83,11 @@
         </section>
         </div>
 
+        <section id = "got-questions">
+            <h2 class = "bghighlight">Got any questions?</h2>
+            <p>Press this <a href="forms.html">link</a> to submit any questions!</p>
+        </section>
+        
     </main>
 
     <footer>
@@ -92,16 +97,24 @@
             </a>
         </div>
 
-        <div class = "footer-section"> 
-            <p><a href="https://sites.google.com/umich.edu/bsiacademicadvising/home">BSI Academic Advising</a></p>
-        </div>
-
         <div class = "footer-section">
             <a href = https://www.instagram.com/umschoolofinformation aria-label = "link to UMSI Instagram">
                 <i class="fa-brands fa-square-instagram"></i>
             </a>
         </div>
+
+        <div class = "footer-section"> 
+            <p><a href="https://sites.google.com/umich.edu/bsiacademicadvising/home">BSI Academic Advising</a></p>
+        </div>
+
+        <div class = "footer-section"> 
+            <p>© <span id="year"></span> UMSI</p>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
     
 </body>
 

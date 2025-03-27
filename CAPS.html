@@ -37,21 +37,29 @@
                 <div class="container-services">
                     <div class="letstalk">
                         <a href="https://caps.umich.edu/lets-talk">"Let's Talk"</a>
+                        <a href = "https://caps.umich.edu/lets-talk"> 
                         <img src="images/lets_talk_graphic.png" alt="Let's talk calendar graphic for Winter 2025">
+                    </a>
                     </div>
                     <div class="peercounseling">
                         <a href="https://caps.umich.edu/individual-peer-counseling">Individual Peer Counseling</a>
+                        <a href = "https://caps.umich.edu/individual-peer-counseling">
                         <img src="images/caps_graphic.png" alt="individual peer counseling graphic with two maize and blue handprints">
+                    </a>
                     </div>
 
                     <div class = "togetherall">
                         <a href="https://caps.umich.edu/article/togetherall">Togetherall</a>
+                        <a href="https://caps.umich.edu/article/togetherall">
                         <img src="images/togetherall_graphic.png" alt="togetherall promotional graphic supporting a safe commuinty for mental health">
+                    </a>
                     </div>
 
                     <div class = "sexualizedviolence">
                         <a href="https://caps.umich.edu/article/sexualized-violence">Sexualized Violence</a>
+                        <a href="https://caps.umich.edu/article/sexualized-violence">
                         <img src="images/hope_image.jpg" alt="the word hope written in chalk on brick with red boots beneath the words">
+                    </a>
                     </div>
                 </div>
         </section>
@@ -83,6 +91,11 @@
             </div>
         </section>
 
+        <section id = "got-questions">
+            <h2 class = "bghighlight">Got any questions?</h2>
+            <p>Press this <a href="forms.html">link</a> to submit any questions!</p>
+        </section>
+        
     </main>
     <footer>
         <div class = "footer-section">
@@ -91,16 +104,24 @@
             </a>
         </div>
     
-        <div class = "footer-section"> 
-            <p><a href="https://caps.umich.edu/">CAPS</a></p>
-        </div>
-    
         <div class = "footer-section">
             <a href = https://www.instagram.com/umschoolofinformation aria-label = "link to UMSI Instagram">
                 <i class="fa-brands fa-square-instagram"></i>
             </a>
         </div>
+
+        <div class = "footer-section"> 
+            <p><a href="https://caps.umich.edu/">CAPS</a></p>
+        </div>
+
+        <div class = "footer-section"> 
+            <p>© <span id="year"></span> UMSI</p>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
     
 </body>
 </html>
